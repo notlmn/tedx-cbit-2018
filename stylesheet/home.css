@@ -1,0 +1,169 @@
+:root {
+  --brand-red: #ff1e00;
+  --brand-black: #171618;
+  --brand-white: #ffffff;
+}
+
+html {
+  display: flex;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  backface-visibility: hidden;
+  background: var(--brand-black);
+  color: var(--brand-white);
+}
+
+header {
+  z-index: 9999;
+  background: transparent;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  align-items: center;
+}
+
+.hero .hero__letter {
+  /* padding: 2rem; */
+}
+
+.hero .hero__content {
+  font-size: 1.875rem;
+}
+
+.hero .hero__content h2 {
+  font-size: 3rem;
+}
+
+.hero .hero__content h2,
+.hero .hero__content p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.hero .hero__content a {
+  display: inline-block;
+  padding: 0.25rem 1.5rem;
+  border: 2px solid var(--brand-red);
+  color: var(--brand-red);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero .hero__content a:hover,
+.hero .hero__content a:focus {
+  background: var(--brand-red);
+  color: var(--brand-white);
+  transition: all 0.2s ease-in-out;
+}
+
+.hero .hero__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.hero .hero__bg.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes planetaryRotation {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hero .hero__bg .planet {
+  position: absolute;
+  width: 256px;
+  /* animation-name: planetaryRotation; */
+  animation-duration: 300s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+.hero .hero__bg .planet:nth-child(1) {
+  left: -30px;
+  top: -74px;
+  width: 10rem;
+  animation-duration: 200s;
+}
+
+.hero .hero__bg .planet:nth-child(1).outside {
+  transform: translateX(-256px) translateY(-256px);
+}
+
+.hero .hero__bg .planet:nth-child(2) {
+  top: 50px;
+  right: 20px;
+  width: 11rem;
+  animation-duration: 250s;
+  animation-direction: reverse;
+}
+
+.hero .hero__bg .planet:nth-child(2).outside {
+  transform: translateX(256px) translateY(-256px);
+}
+
+.hero .hero__bg .planet:nth-child(3) {
+  right: 13rem;
+  bottom: 20px;
+  width: 13rem;
+  animation-duration: 176.4s;
+}
+
+.hero .hero__bg .planet:nth-child(3).outside {
+  transform: translateX(256px) translateY(256px);
+}
+
+.hero .hero__bg .planet:nth-child(4) {
+  left: 50px;
+  bottom: 40px;
+  width: 12rem;
+  animation-duration: 214.53s;
+}
+
+.hero .hero__bg .planet:nth-child(4).outside {
+  transform: translateX(-256px) translateY(256px);
+}
+
+.hero .hero__bg .astronaut {
+  position: absolute;
+  max-width: 12rem;
+  max-height: 12rem;
+  bottom: 0;
+  right: 0;
+}
+
+.hero .hero__bg .astronaut.outside {
+  bottom: -12rem;
+  right: -12rem;
+}
