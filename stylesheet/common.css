@@ -1,3 +1,9 @@
+:root {
+  --brand-red: #ff1e00;
+  --brand-black: #171618;
+  --brand-white: #ffffff;
+}
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -17,10 +23,14 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: var(--brand-red);
+}
+
 .container {
   display: block;
   margin: auto;
-  max-width: 1100px;
+  max-width: 68rem;
   padding: 0 1rem;
 }
 
@@ -33,9 +43,21 @@ img {
   display: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+
+/******************* header *********************/
+
 header {
   padding: 1rem 0;
-  background: #171618;
+  background: var(--brand-black);
+  color: var(--brand-white);
 }
 
 header a {
@@ -73,4 +95,45 @@ header .header__nav ul li a:hover,
 header .header__nav ul li a:focus,
 header .header__nav ul li a:active {
   opacity: 1;
+}
+
+
+
+/******************* footer *********************/
+
+.page-footer {
+  position: relative;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  border-top: 2px solid var(--brand-red);
+}
+
+.page-footer .links {
+  display: flex;
+}
+
+.page-footer .links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.page-footer .links ul li {
+  list-style: none;
+}
+
+.page-footer .links ul li a {
+  opacity: 0.8;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.page-footer .links ul li a:hover,
+.page-footer .links ul li a:focus {
+  opacity: 1;
+}
+
+.page-footer .license-notice {
+  padding: 2rem 1rem;
+  text-align: center;
 }

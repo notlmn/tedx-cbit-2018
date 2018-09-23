@@ -1,0 +1,129 @@
+/*
+header {
+  background: linear-gradient(to bottom, var(--brand-black), transparent)
+}
+*/
+
+.talk {
+  background-color: #f1f4f9;
+}
+
+.talk .talk__header {
+  background: var(--brand-black);
+  display: flex;
+  position: relative;
+  height: 70vh;
+  min-height: 20rem;
+}
+
+.talk .talk__header::before,
+.talk .talk__header::after {
+  content: "";
+  position: absolute;
+  height: 10%;
+  left: 0;
+  right: 0;
+}
+
+.talk .talk__header::before {
+  top: 0;
+  background-image: linear-gradient(to bottom, var(--brand-black), transparent);
+}
+
+.talk .talk__header::after {
+  bottom: 0;
+  background-image: linear-gradient(to top, var(--brand-black), transparent);
+}
+
+.talk .talk__header .talk__image {
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.talk .talk__body {
+  display: flex;
+  margin: auto;
+  padding: 1rem 0;
+  max-width: 68rem;
+  flex-wrap: wrap;
+}
+
+.talk .talk__body .talk__description,
+.talk .talk__body .talk__meta {
+  background-color: var(--brand-white);
+  /* border-radius: 2px; */
+  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+		0 3px 1px -2px rgba(0, 0, 0, 0.2),
+		0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+}
+
+.talk .talk__body .talk__description {
+  flex: 1;
+  min-width: 20rem;
+  padding: 1rem;
+}
+
+.talk .talk__body .section__heading {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+.talk .talk__share {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.talk .talk__share .heading {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.talk .talk__share .share-links {
+  display: flex;
+}
+
+.talk .talk__share .share-links a {
+  width: 2.625rem;
+  height: 2.625rem;
+  margin-right: 0.5rem;
+}
+
+
+
+
+.talk .talk__body .talk__meta {
+  padding: 1rem;
+  width: 20rem;
+  margin-left: 1rem;
+}
+
+.talk .speaker {
+  display: flex;
+  flex-direction: column;
+}
+
+.talk .speaker .speaker__image {
+  display: flex;
+  /* display: block;
+  margin: auto; */
+}
+
+.talk .speaker .speaker__image img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
+
+.talk .speaker .speaker__name {
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}

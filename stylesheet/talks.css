@@ -1,0 +1,49 @@
+main {
+  padding: 1rem 0;
+}
+
+main h2 {
+  margin: 0;
+}
+
+
+.talks {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
+.talks .talk {
+  display: flex;
+  background: #f3f3f3;
+}
+
+.talks .talk a {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.talks .talk .talk__img {
+  width: 100%;
+}
+
+.talks .talk .talk__title {
+  display: block;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  font-weight: normal;
+}
+
+.talks .talk:hover .talk__title {
+  color: var(--brand-red);
+}
+
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 30, 0, 0.3);
+}

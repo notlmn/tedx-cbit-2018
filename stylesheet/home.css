@@ -1,9 +1,3 @@
-:root {
-  --brand-red: #ff1e00;
-  --brand-black: #171618;
-  --brand-white: #ffffff;
-}
-
 html {
   display: flex;
 }
@@ -15,52 +9,78 @@ body {
   height: 100vh;
   overflow: auto;
   backface-visibility: hidden;
-  background: var(--brand-black);
-  color: var(--brand-white);
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
   background: transparent;
 }
 
 .hero {
+  position: relative;
+  background: var(--brand-black);
+  color: var(--brand-white);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.hero::before {
+  height: 6rem;
+  top: 0;
+  background: linear-gradient(to bottom, var(--brand-black), transparent);
+}
+
+.hero::after {
+  height: 3rem;
+  bottom: 0;
+  background: linear-gradient(to top, var(--brand-black), transparent);
 }
 
 .hero .container {
+  position: relative;
+  z-index: 2;
   height: 100%;
   display: grid;
+  padding: 9rem 0 4rem;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   align-items: center;
 }
 
 .hero .hero__letter {
-  /* padding: 2rem; */
+  padding: 1rem 4rem;
 }
 
 .hero .hero__content {
-  font-size: 1.875rem;
-}
-
-.hero .hero__content h2 {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .hero .hero__content h2,
 .hero .hero__content p {
+  font-size: 1em;
   margin: 0;
   margin-bottom: 0.5rem;
+}
+
+.hero .hero__content h2 {
+  font-size: 2em;
 }
 
 .hero .hero__content a {
   display: inline-block;
   padding: 0.25rem 1.5rem;
-  border: 2px solid var(--brand-red);
+  border: 0.125rem solid var(--brand-red);
   color: var(--brand-red);
   text-transform: uppercase;
   text-decoration: none;
@@ -79,14 +99,17 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   overflow: hidden;
   opacity: 0;
   transform: scale(0.8);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .hero .hero__bg.visible {
-  opacity: 1;
+  opacity: 0.6;
   transform: none;
 }
 
@@ -101,8 +124,15 @@ header {
 }
 
 .hero .hero__bg .planet {
-  position: absolute;
-  width: 256px;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 1rem;
+
+  /* position: absolute; */
   /* animation-name: planetaryRotation; */
   animation-duration: 300s;
   animation-timing-function: linear;
@@ -111,9 +141,12 @@ header {
 }
 
 .hero .hero__bg .planet:nth-child(1) {
-  left: -30px;
-  top: -74px;
-  width: 10rem;
+  align-self: self-start;
+  justify-self: self-start;
+
+  margin-top: -3rem;
+  margin-left: -6rem;
+
   animation-duration: 200s;
 }
 
@@ -122,9 +155,9 @@ header {
 }
 
 .hero .hero__bg .planet:nth-child(2) {
-  top: 50px;
-  right: 20px;
-  width: 11rem;
+  align-self: self-start;
+  justify-self: self-end;
+
   animation-duration: 250s;
   animation-direction: reverse;
 }
@@ -134,36 +167,59 @@ header {
 }
 
 .hero .hero__bg .planet:nth-child(3) {
-  right: 13rem;
-  bottom: 20px;
-  width: 13rem;
+  align-self: self-end;
+  justify-self: self-start;
+
+  margin-bottom: -5rem;
+
   animation-duration: 176.4s;
 }
 
 .hero .hero__bg .planet:nth-child(3).outside {
-  transform: translateX(256px) translateY(256px);
+  transform: translateX(-256px) translateY(256px);
 }
 
 .hero .hero__bg .planet:nth-child(4) {
-  left: 50px;
-  bottom: 40px;
-  width: 12rem;
+  align-self: self-end;
+  justify-self: self-end;
+
+  margin-right: -4rem;
+
   animation-duration: 214.53s;
 }
 
 .hero .hero__bg .planet:nth-child(4).outside {
-  transform: translateX(-256px) translateY(256px);
+  transform: translateX(256px) translateY(256px);
 }
 
 .hero .hero__bg .astronaut {
   position: absolute;
   max-width: 12rem;
   max-height: 12rem;
-  bottom: 0;
-  right: 0;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .hero .hero__bg .astronaut.outside {
   bottom: -12rem;
   right: -12rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .hero .hero__content {
+    font-size: 1.125rem;
+  }
+}
+
+
+
+
+.section {
+  padding: 3rem 1rem;
+}
+
+.section .section__heading {
+  margin: 0;
+  font-weight: normal;
 }
