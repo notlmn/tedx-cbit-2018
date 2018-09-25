@@ -216,10 +216,107 @@ header {
 
 
 .section {
-  padding: 3rem 1rem;
+  padding: 3rem 0;
+}
+
+.section--colored {
+  background: var(--brand-red-desat);
+  color: #fff;
 }
 
 .section .section__heading {
   margin: 0;
-  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.section .section__subheading {
+  font-size: 1.25rem;
+  margin: 1rem 0 2rem;
+}
+
+
+
+.speakers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.speakers .speaker {
+  position: relative;
+  text-align: center;
+  display: grid;
+  background: var(--brand-black);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.speakers .speaker::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background-image: linear-gradient(to top, var(--brand-black), transparent);
+}
+
+.speakers .speaker .speaker__image {
+  width: 100%;
+}
+
+.speakers .speaker .speaker__name,
+.speakers .speaker .speaker__area {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.speakers .speaker .speaker__name {
+  font-weight: bold;
+  font-size: 1.125rem;
+  bottom: 2.25rem;
+  z-index: 2;
+}
+
+.speakers .speaker .speaker__area {
+  font-size: 0.85rem;
+  bottom: 1rem;
+}
+
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.schedule .schedule-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.schedule .schedule-item .schedule__time,
+.schedule .schedule-item .schedule__description {
+  padding: 1rem;
+}
+
+.schedule .schedule-item .schedule__time {
+  padding: 1rem 1rem 1rem 0;
+}
+
+.schedule .schedule-item .schedule__description {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-top: 1px dashed var(--brand-red);
+  border-left: 2px solid var(--brand-red);
+}
+
+.schedule .schedule-item:nth-child(odd) .schedule__description {
+  background: #f0f1f2;
+}
+
+.schedule .schedule-item:last-child .schedule__description {
+  border-bottom: 1px dashed var(--brand-red);
 }

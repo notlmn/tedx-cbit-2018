@@ -1,5 +1,6 @@
 :root {
   --brand-red: #ff1e00;
+  --brand-red-desat: #dc0000;
   --brand-black: #171618;
   --brand-white: #ffffff;
 }
@@ -24,7 +25,7 @@ img {
 }
 
 a {
-  color: var(--brand-red);
+  color: var(--brand-red-desat);
 }
 
 .container {
@@ -46,11 +47,6 @@ a {
 .text-center {
   text-align: center;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-}
-
 
 /******************* header *********************/
 
