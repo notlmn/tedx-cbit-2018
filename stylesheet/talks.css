@@ -6,41 +6,57 @@ main h2 {
   margin: 0;
 }
 
+main .container {
+  max-width: 55rem;
+}
+
 
 .talks {
-  display: grid;
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
   padding: 1rem 0;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
 
 .talks .talk {
-  display: flex;
-  background: #f3f3f3;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 }
 
 .talks .talk a {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   text-decoration: none;
-  color: inherit;
 }
 
 .talks .talk .talk__img {
+  background: #f3f3f3;
   width: 100%;
+  opacity: 0.9;
+  transition: opacity 0.2s linear;
+}
+
+.talks .talk:hover .talk__img {
+  opacity: 1;
+}
+
+.talks .talk .talk__description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
 }
 
 .talks .talk .talk__title {
   display: block;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0;
-  padding: 0.5rem;
   font-weight: normal;
 }
 
-.talks .talk:hover .talk__title {
-  color: var(--brand-red);
+.talks .talk .talk__title a {
+  display: block;
+}
+
+.talks .talk .talk__speaker {
+  margin: 0;
 }
 
 a:focus {

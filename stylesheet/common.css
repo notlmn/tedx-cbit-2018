@@ -28,6 +28,10 @@ a {
   color: var(--brand-red-desat);
 }
 
+a:hover {
+  color: var(--brand-red);
+}
+
 .container {
   display: block;
   margin: auto;
