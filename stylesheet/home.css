@@ -229,6 +229,10 @@ header {
   text-transform: uppercase;
 }
 
+.section .section__heading span {
+  text-transform: none;
+}
+
 .section .section__subheading {
   font-size: 1.25rem;
   margin: 1rem 0 2rem;
