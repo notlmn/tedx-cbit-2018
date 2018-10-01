@@ -214,32 +214,6 @@ header {
 
 
 
-
-.section {
-  padding: 3rem 0;
-}
-
-.section--colored {
-  background: var(--brand-red-desat);
-  color: #fff;
-}
-
-.section .section__heading {
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.section .section__heading span {
-  text-transform: none;
-}
-
-.section .section__subheading {
-  font-size: 1.25rem;
-  margin: 1rem 0 2rem;
-}
-
-
-
 .speakers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
