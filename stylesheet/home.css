@@ -101,11 +101,14 @@ header {
   height: 100%;
   overflow: hidden;
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.6);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
+  background-image: url('/img/stars.jpg');
+  background-size: cover;
 }
 
 .hero .hero__bg.visible {
@@ -206,17 +209,16 @@ header {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 46rem) {
   .hero .hero__content {
     font-size: 1.125rem;
   }
 }
 
 
-
 .speakers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   grid-gap: 1rem;
 }
 

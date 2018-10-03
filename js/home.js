@@ -15,7 +15,7 @@ function init() {
 
   flip = new FLIP({
     element: bg,
-    duration: 200,
+    duration: 500,
     easing: easingOut
   });
 
