@@ -61,7 +61,7 @@ header {
 }
 
 header a {
-  display: inline-block;
+  display: flex;
   text-decoration: none;
   color: inherit;
 }
@@ -73,6 +73,10 @@ header .container {
 
 header .logo {
   max-height: 4rem;
+}
+
+header .header__nav {
+  display: flex;
 }
 
 header .header__nav ul {
@@ -87,7 +91,7 @@ header .header__nav ul li {
 }
 
 header .header__nav ul li a {
-  padding: 1.25rem;
+  padding: 1.25rem 0.75rem;
   opacity: 0.8;
 }
 
@@ -106,6 +110,32 @@ header .header__nav ul li a:active {
 .section--colored {
   background: var(--brand-red-desat);
   color: #fff;
+}
+
+.section--colored a {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.section--colored a::before {
+  position: absolute;
+  content: "";
+  left: -0.125rem;
+  top: -0.125rem;
+  right: -0.125rem;
+  bottom: -0.125rem;
+  border-radius: 0.125rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.section--colored a:hover::before,
+.section--colored a:focus::before,
+.section--colored a:active::before {
+  opacity: 1;
 }
 
 .section .section__heading {

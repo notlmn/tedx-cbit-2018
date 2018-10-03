@@ -15,9 +15,21 @@ header {
 }
 
 .speaker__info {
+  padding: 1rem 0;
   display: grid;
   grid-template-columns: 210px minmax(210px, 1fr);
   grid-gap: 1.5em;
+}
+
+@keyframes move {
+  from {
+    transform: translate(0.5rem, 0.5rem);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  to {
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 .speaker__image {
@@ -25,11 +37,13 @@ header {
   max-width: 220px;
   height: auto;
   border-radius: 2px;
-  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  transform: translate(0.5rem, 0.5rem);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  animation: move 0.3s 0.3s ease-out forwards;
 }
 
-.speaker__desc {
-  margin: 0;
+.speaker__desc p {
+  margin: 0 0 1rem;
 }
 
 @media only screen and (max-width: 600px) {

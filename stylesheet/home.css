@@ -237,8 +237,13 @@ header {
 }
 
 .speakers .speaker::before {
+  display: none;
+}
+
+.speakers .speaker::after {
   position: absolute;
   content: "";
+  top: initial;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -256,13 +261,13 @@ header {
   margin: 0;
   width: 100%;
   padding: 0.25rem;
+  z-index: 1;
 }
 
 .speakers .speaker .speaker__name {
   font-weight: bold;
   font-size: 1.125rem;
   bottom: 2.25rem;
-  z-index: 2;
 }
 
 .speakers .speaker .speaker__area {
@@ -289,12 +294,12 @@ header {
 
 .schedule .schedule-item .schedule__time {
   padding: 1rem 1rem 1rem 0;
+  font-size: 0.875rem;
 }
 
 .schedule .schedule-item .schedule__description {
   flex: 1;
   font-weight: 500;
-  font-size: 1.125rem;
   border-top: 1px dashed var(--brand-red);
   border-left: 2px solid var(--brand-red);
 }
