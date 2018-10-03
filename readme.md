@@ -1,9 +1,4 @@
-## Todo
-- Homepage
-- Live?
-- Events
-- Sponsors and Partners
-- About
+## TEDxCBIT 2018
 
 ## Attribution
 ```
