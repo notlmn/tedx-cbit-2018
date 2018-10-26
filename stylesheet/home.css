@@ -52,7 +52,7 @@ header {
   z-index: 2;
   height: 100%;
   display: grid;
-  padding: 9rem 0 4rem;
+  padding: 12rem 0 4rem;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   align-items: center;
 }

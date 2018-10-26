@@ -101,6 +101,17 @@ header .header__nav ul li a:active {
   opacity: 1;
 }
 
+header .completion-notice {
+  padding: 0.5rem 0;
+  text-align: center;
+  flex: 1;
+}
+
+header .completion-notice a {
+  display: inline-block;
+  border-bottom: 1px solid var(--brand-white);
+}
+
 
 /******************* section *********************/
 .section {
