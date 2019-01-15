@@ -83,7 +83,7 @@ header {
   border: 0.125rem solid var(--brand-red);
   color: var(--brand-red);
   text-transform: uppercase;
-  text-decoration: none;
+  border: none;
 }
 
 .hero .hero__content a:hover,

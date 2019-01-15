@@ -12,19 +12,17 @@ main .container {
 
 
 .talks {
-  display: flex;
-  flex-direction: column;
   padding: 1rem 0;
 }
 
 .talks .talk {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
 .talks .talk a {
-  text-decoration: none;
+  border: none;
 }
 
 .talks .talk .talk__img {
@@ -38,10 +36,15 @@ main .container {
   opacity: 1;
 }
 
-.talks .talk .talk__description {
+.talks .talk .talk__meta {
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+}
+
+.talks .talk .talk__description {
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
 }
 
 .talks .talk .talk__title {
@@ -59,7 +62,17 @@ main .container {
   margin: 0;
 }
 
-a:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(255, 30, 0, 0.3);
+
+@media only screen and (max-width: 42.5rem) {
+  .talks .talk .talk__meta {
+    padding: 0;
+  }
+
+  .talks .talk .talk__title {
+    font-size: 1.125rem;
+  }
+
+  .talks .talk .talk__speaker {
+    font-size: 0.875rem;
+  }
 }
